@@ -1,3 +1,6 @@
 *.h5
 *.hdf5
 *.pyc
+data/quality*
+data/cifar*
+logs/
