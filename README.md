@@ -5,9 +5,7 @@ Keras implementation of All Convolutional Net (https://arxiv.org/abs/1412.6806#)
 
 'Striving for Simplicity: The All Convolutional Net' The original paper can be found [here](https://arxiv.org/abs/1412.6806#).
 
-A related [blog](https://medium.com/@matelabs_ai/how-these-researchers-tried-something-unconventional-to-came-out-with-a-smaller-yet-better-image-544327f30e72#.i3227lyhb)
-
-This repository is modified from [All-Conv-Keras](https://github.com/MateLabs/All-Conv-Keras)
+This repository is modified from repo [All-Conv-Keras](https://github.com/MateLabs/All-Conv-Keras) and a [blog](https://medium.com/@matelabs_ai/how-these-researchers-tried-something-unconventional-to-came-out-with-a-smaller-yet-better-image-544327f30e72#.i3227lyhb). (Thanks!)
 
 ## Requirements
 
