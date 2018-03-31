@@ -4,9 +4,9 @@ from scipy import ndimage, misc
 import glob
 import os
 
-num_list = range(11) + [15, 20, 25, 50, 75] # [3, 4] # range(1, 5) # range(5, 11) # [15, 20, 25, 50, 75]
-# print num_list
-img_dirs = ["quality_" + str(i) for i in num_list]
+quality_list = [1, 5, 10, 15, 20, 25, 50, 75, 100]
+
+img_dirs = ["quality_" + str(i) for i in quality_list]
 
 label_names = ['airplane', 'automobile', 'bird', 'cat', 'deer',
                'dog', 'frog', 'horse', 'ship', 'truck']

@@ -3,4 +3,5 @@
 *.pyc
 data/quality*
 data/cifar*
+data/test*
 logs/

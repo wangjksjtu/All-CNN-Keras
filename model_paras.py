@@ -8,11 +8,11 @@ model_list = ["all-cnns",
               "all-cnnsx3",
               "cnns-dense-64",
               "cnns-dense-128",
-              "cnns-dense-64-128",
-              "cnns-x2-dense-64",
+              "cnns-dense-128-256",
+              "cnns-x2-dense-128",
               "cnns-x3-dense-64",
               "cnns-x3-dense-128",
-              "cnns-x3-dense-64-128",
+              "cnns-x3-dense-128-256",
              ]
 
 def save_summary(model, header, suffix):

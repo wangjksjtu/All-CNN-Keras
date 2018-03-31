@@ -15,14 +15,20 @@ import numpy as np
 import argparse
 import os
 
+import tensorflow as tf
+from keras.backend.tensorflow_backend import set_session
+config = tf.ConfigProto()
+config.gpu_options.per_process_gpu_memory_fraction = 0.3
+set_session(tf.Session(config=config))
+
 K.set_image_dim_ordering('tf')
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--quality', type=int, default=15, help='Image quality [default: 15]')
-parser.add_argument('--setting', type=int, default=0, help='Model architecture (0-9) [default: 9]')
+parser.add_argument('--quality', type=int, default=100, help='Image quality [default: 100]')
+parser.add_argument('--setting', type=int, default=0, help='Model architecture (0-8) [default: 9]')
 parser.add_argument('--model', type=str, default="", help='Model architecture description (0-9) [default: ""]')
 parser.add_argument('--batch_size', type=int, default=128, help='Batch size during training [default: 128]')
-parser.add_argument('--num_epoch', type=int, default=300, help='Batch size during training [default: 300]')
+parser.add_argument('--num_epoch', type=int, default=200, help='Batch size during training [default: 200]')
 parser.add_argument('--learning_rate', type=float, default=0.01, help='Initial learning rate [default: 0.01]')
 parser.add_argument('--decay_rate', type=float, default=1e-6, help='Decay rate [default: 1e-6]')
 parser.add_argument('--log_dir', type=str, default="", help="The path of training log (saving directory)")
@@ -39,11 +45,11 @@ model_list = ["all-cnns",
               "all-cnnsx3",
               "cnns-dense-64",
               "cnns-dense-128",
-              "cnns-dense-64-128",
-              "cnns-x2-dense-64",
+              "cnns-dense-128-256",
+              "cnns-x2-dense-128",
               "cnns-x3-dense-64",
               "cnns-x3-dense-128",
-              "cnns-x3-dense-64-128",
+              "cnns-x3-dense-128-256",
              ]
 
 if MODEL == "":
